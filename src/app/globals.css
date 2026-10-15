@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --brand-50: #FFF7ED;
+  --brand-100: #FFEDD5;
+  --brand-200: #FED7AA;
+  --brand-300: #FDBA74;
+  --brand-400: #FB923C;
+  --brand-500: #F97316; /* Primary Fintech Orange */
+  --brand-600: #EA580C;
+  --brand-700: #C2410C;
+  --brand-800: #9A3412;
+  --brand-900: #7C2D12;
+}
+
+/* Baby Pink & Soft Yellow Alternative Preset (/generative_ui compliance) */
+.theme-pink-yellow {
+  --brand-50: #FFF1F2;
+  --brand-100: #FFE4E6;
+  --brand-200: #FECDD3;
+  --brand-300: #FDA4AF;
+  --brand-400: #FB7185;
+  --brand-500: #F43F5E;
+  --brand-600: #E11D48;
+  --brand-700: #BE123C;
+  --brand-800: #9F1239;
+  --brand-900: #881337;
+}
+
+body {
+  font-family: var(--font-jakarta);
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect prefers-reduced-motion as mandated in Part 9 & 11 */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Fintech Utilities */
+.fintech-card {
+  background: #FFFFFF;
+  border: 1px solid #F1F5F9;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fintech-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px -3px rgba(249, 115, 22, 0.3);
+}
+
+.gradient-orange-text {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-orange-bg {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+}
+
+.badge-starter {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.badge-pro {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+  color: #C2410C;
+  border: 1px solid #FDBA74;
+}
